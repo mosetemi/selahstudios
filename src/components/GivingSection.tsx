@@ -9,7 +9,7 @@ const impacts = [
 
 const GivingSection = () => {
   return (
-    <section id="giving" className="py-24 bg-primary">
+    <section id="giving" className="py-24 bg-charcoal">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -18,13 +18,13 @@ const GivingSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-accent text-lg italic text-accent tracking-wide mb-2">
+          <p className="font-accent text-lg italic text-gold tracking-wide mb-2">
             Sow Into the Vision
           </p>
-          <h2 className="font-display text-3xl md:text-4xl text-primary-foreground">
+          <h2 className="font-display text-3xl md:text-4xl text-cream">
             Partner With Us
           </h2>
-          <div className="w-16 h-px bg-accent mx-auto mt-4" />
+          <div className="w-16 h-px bg-gold mx-auto mt-4" />
         </motion.div>
 
         <motion.div
@@ -34,7 +34,7 @@ const GivingSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <p className="font-body text-sm md:text-base text-primary-foreground/80 leading-relaxed mb-10">
+          <p className="font-body text-sm md:text-base text-cream/80 leading-relaxed mb-10">
             Your generosity fuels the mission. Every gift goes directly toward
             hosting community events, blessing others through giveaways, and
             funding the content and resources that spread God's vision.
@@ -51,11 +51,11 @@ const GivingSection = () => {
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
               >
                 <item.icon
-                  className="text-accent"
+                  className="text-gold"
                   size={28}
                   strokeWidth={1.2}
                 />
-                <span className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/60">
+                <span className="font-body text-xs uppercase tracking-[0.15em] text-cream/60">
                   {item.label}
                 </span>
               </motion.div>
@@ -66,11 +66,11 @@ const GivingSection = () => {
             href="https://cash.app/$theselahstudio"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-body text-sm uppercase tracking-[0.2em] px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-foreground transition-all duration-300"
+            className="inline-block font-body text-sm uppercase tracking-[0.2em] px-10 py-4 border-2 border-gold text-gold hover:bg-gold hover:text-foreground transition-all duration-300"
           >
             Give via CashApp
           </a>
-          <p className="mt-4 font-accent text-sm italic text-primary-foreground/50">
+          <p className="mt-4 font-accent text-sm italic text-cream/50">
             $theselahstudio
           </p>
         </motion.div>
