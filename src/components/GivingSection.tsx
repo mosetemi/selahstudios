@@ -66,11 +66,11 @@ const GivingSection = () => {
             href="https://cash.app/$theselahstudio"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-body text-sm uppercase tracking-[0.2em] px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-foreground transition-all duration-300"
+            className="inline-block font-body text-sm uppercase tracking-[0.2em] px-10 py-4 border-2 border-gold text-gold hover:bg-gold hover:text-foreground transition-all duration-300"
           >
             Give via CashApp
           </a>
-          <p className="mt-4 font-accent text-sm italic text-primary-foreground/50">
+          <p className="mt-4 font-accent text-sm italic text-cream/50">
             $theselahstudio
           </p>
         </motion.div>
