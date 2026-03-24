@@ -18,13 +18,13 @@ const GivingSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-accent text-lg italic text-accent tracking-wide mb-2">
+          <p className="font-accent text-lg italic text-gold tracking-wide mb-2">
             Sow Into the Vision
           </p>
-          <h2 className="font-display text-3xl md:text-4xl text-primary-foreground">
+          <h2 className="font-display text-3xl md:text-4xl text-cream">
             Partner With Us
           </h2>
-          <div className="w-16 h-px bg-accent mx-auto mt-4" />
+          <div className="w-16 h-px bg-gold mx-auto mt-4" />
         </motion.div>
 
         <motion.div
