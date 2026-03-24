@@ -1,4 +1,11 @@
+import { Instagram, DollarSign, Headphones } from "lucide-react";
 import logo from "@/assets/logo.png";
+
+const socials = [
+  { icon: Instagram, label: "Studio", href: "https://www.instagram.com/theselah.studios" },
+  { icon: Instagram, label: "Podcast", href: "https://www.instagram.com/theselah.pod" },
+  { icon: DollarSign, label: "CashApp", href: "https://cash.app/$theselahstudio" },
+];
 
 const FooterSection = () => {
   return (
@@ -8,8 +15,25 @@ const FooterSection = () => {
         <p className="font-accent text-sm italic text-cream/50 mb-8">
           Pause. Listen. Create.
         </p>
+
+        <div className="flex justify-center gap-6 mb-8">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-cream/40 hover:text-gold transition-colors"
+              aria-label={s.label}
+            >
+              <s.icon size={18} strokeWidth={1.4} />
+              <span className="font-body text-xs uppercase tracking-[0.15em]">{s.label}</span>
+            </a>
+          ))}
+        </div>
+
         <div className="flex justify-center gap-8 mb-8">
-          {["Shop", "Podcast", "Community", "About"].map((link) => (
+          {["Shop", "Podcast", "Community", "Giving", "About"].map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}

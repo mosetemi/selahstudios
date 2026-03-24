@@ -45,7 +45,7 @@ const Connect = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Instagram - Main */}
             <motion.a
-              href="https://instagram.com/theselah.studios"
+              href="https://www.instagram.com/theselah.studios"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-8 border border-border hover:border-accent/40 transition-all duration-500 text-center"
@@ -65,7 +65,7 @@ const Connect = () => {
 
             {/* Instagram - Podcast */}
             <motion.a
-              href="https://instagram.com/theselah.pod"
+              href="https://www.instagram.com/theselah.pod"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-8 border border-border hover:border-accent/40 transition-all duration-500 text-center"
