@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Calendar, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -21,7 +22,8 @@ const items = [
     title: "Join the Community",
     description: "Stay connected. Be part of a tribe that seeks God's vision and brings it to life.",
     linkText: "Connect With Us",
-    href: "#",
+    href: "/connect",
+    isRoute: true,
   },
 ];
 
@@ -56,12 +58,21 @@ const CommunitySection = () => {
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
                 {item.description}
               </p>
-              <a
-                href={item.href}
-                className="font-body text-xs uppercase tracking-[0.2em] text-accent hover:text-foreground transition-colors border-b border-accent/40 pb-1"
-              >
-                {item.linkText}
-              </a>
+              {(item as any).isRoute ? (
+                <Link
+                  to={item.href}
+                  className="font-body text-xs uppercase tracking-[0.2em] text-accent hover:text-foreground transition-colors border-b border-accent/40 pb-1"
+                >
+                  {item.linkText}
+                </Link>
+              ) : (
+                <a
+                  href={item.href}
+                  className="font-body text-xs uppercase tracking-[0.2em] text-accent hover:text-foreground transition-colors border-b border-accent/40 pb-1"
+                >
+                  {item.linkText}
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
