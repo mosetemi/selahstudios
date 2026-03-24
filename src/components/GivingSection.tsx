@@ -51,11 +51,11 @@ const GivingSection = () => {
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
               >
                 <item.icon
-                  className="text-accent"
+                  className="text-gold"
                   size={28}
                   strokeWidth={1.2}
                 />
-                <span className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/60">
+                <span className="font-body text-xs uppercase tracking-[0.15em] text-cream/60">
                   {item.label}
                 </span>
               </motion.div>
