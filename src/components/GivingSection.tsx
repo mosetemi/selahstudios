@@ -34,7 +34,7 @@ const GivingSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <p className="font-body text-sm md:text-base text-primary-foreground/80 leading-relaxed mb-10">
+          <p className="font-body text-sm md:text-base text-cream/80 leading-relaxed mb-10">
             Your generosity fuels the mission. Every gift goes directly toward
             hosting community events, blessing others through giveaways, and
             funding the content and resources that spread God's vision.
