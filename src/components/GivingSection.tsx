@@ -9,7 +9,7 @@ const impacts = [
 
 const GivingSection = () => {
   return (
-    <section id="giving" className="py-24 bg-primary">
+    <section id="giving" className="py-24 bg-charcoal">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
