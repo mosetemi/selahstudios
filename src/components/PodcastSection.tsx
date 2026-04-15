@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Headphones, ExternalLink } from "lucide-react";
+import { Headphones, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { buildComingSoonPath } from "@/lib/routes";
 
 const platforms = [
   { name: "Apple Podcasts", url: "#" },
@@ -38,14 +40,14 @@ const PodcastSection = () => {
 
             <div className="space-y-3">
               {platforms.map((p) => (
-                <a
+                <Link
                   key={p.name}
-                  href={p.url}
+                  to={buildComingSoonPath(p.name)}
                   className="flex items-center justify-between px-5 py-3 border border-gold/30 text-cream hover:bg-gold/10 transition-colors group"
                 >
                   <span className="font-body text-sm uppercase tracking-widest">{p.name}</span>
-                  <ExternalLink size={16} className="text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                  <ArrowRight size={16} className="text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
               ))}
             </div>
           </motion.div>

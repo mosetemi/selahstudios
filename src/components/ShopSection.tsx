@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import jrPurple from "@/assets/jr-purple.png";
 import jsBlackGold from "@/assets/js-black-gold.png";
 import shammahVarsity from "@/assets/shammah-varsity.png";
 import jirehGreen from "@/assets/jireh-green.png";
 import shalomVarsity from "@/assets/shalom-varsity.png";
+import { buildComingSoonPath } from "@/lib/routes";
 
 const products = [
   {
@@ -58,22 +60,27 @@ const ShopSection = () => {
           {products.map((product, i) => (
             <motion.div
               key={product.name}
-              className="group cursor-pointer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="relative overflow-hidden bg-secondary aspect-[3/4] mb-4">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="font-display text-lg text-foreground">{product.name}</h3>
-              <p className="font-accent text-sm italic text-muted-foreground">{product.subtitle}</p>
-              <p className="font-body text-sm text-accent mt-1 tracking-wide">{product.price}</p>
+              <Link
+                to={buildComingSoonPath(product.name)}
+                className="group block cursor-pointer"
+                aria-label={`Open coming soon page for ${product.name}`}
+              >
+                <div className="relative mb-4 aspect-[3/4] overflow-hidden bg-secondary">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="font-display text-lg text-foreground">{product.name}</h3>
+                <p className="font-accent text-sm italic text-muted-foreground">{product.subtitle}</p>
+                <p className="mt-1 font-body text-sm tracking-wide text-accent">{product.price}</p>
+              </Link>
             </motion.div>
           ))}
         </div>
