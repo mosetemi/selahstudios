@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <a href="#" className="flex items-center gap-3">
-          <img src={tpLogo} alt="The Selah Studios" className="h-18 w-18 object-contain" />
+          <img src={tpLogo} alt="The Selah Studios" className="h-12 w-12 object-contain" />
           <span className="font-display text-lg tracking-wide text-foreground hidden sm:block">
             The Selah Studios
           </span>
