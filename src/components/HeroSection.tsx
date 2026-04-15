@@ -5,6 +5,7 @@ import heroBg from "@/assets/Selah_Hero_Section.mp4";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal">
+
       {/* Video Background */}
       <video
         autoPlay
@@ -15,12 +16,23 @@ const HeroSection = () => {
       >
         <source src={heroBg} type="video/mp4" />
       </video>
+
       {/* Dark overlay so text stays readable */}
       <div className="absolute inset-0 bg-black/50" />
 
-        
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--gold)/0.3),transparent_60%)]" />
+
+      {/* Main content */}
+      <div className="container mx-auto px-4 text-center relative z-10">
+        <motion.img
+          src={logo}
+          alt="The Selah Studios"
+          className="mx-auto w-40 h-40 md:w-56 md:h-56 object-contain mb-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
 
         <motion.p
           className="font-accent text-xl md:text-2xl italic text-gold tracking-wide mb-6"
@@ -55,24 +67,4 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <a
-            href="#shop"
-            className="inline-block px-8 py-3 bg-gold text-charcoal font-body text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
-          >
-            Shop Collection
-          </a>
-          <a
-            href="#podcast"
-            className="inline-block px-8 py-3 border border-gold text-gold font-body text-sm uppercase tracking-widest hover:bg-gold/10 transition-colors"
-          >
-            Listen Now
-          </a>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default HeroSection;
+          transition={{ d
