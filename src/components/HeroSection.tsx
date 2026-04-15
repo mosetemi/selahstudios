@@ -24,16 +24,6 @@ const HeroSection = () => {
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--gold)/0.3),transparent_60%)]" />
 
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <motion.img
-          src={logo}
-          alt="The Selah Studios"
-          className="mx-auto w-40 h-40 md:w-56 md:h-56 object-contain mb-8"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
-
         <motion.p
           className="font-accent text-xl md:text-2xl italic text-gold tracking-wide mb-6"
           initial={{ opacity: 0, y: 20 }}
