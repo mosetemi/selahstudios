@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.png";
 import heroBg from "@/assets/Selah_Hero_Section.mp4";
 
 const HeroSection = () => {
@@ -18,8 +17,6 @@ const HeroSection = () => {
       {/* Dark overlay so text stays readable */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Rest of content stays exactly the same */}
-      <div className="container mx-auto px-4 text-center relative z-10">
         
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--gold)/0.3),transparent_60%)]" />
