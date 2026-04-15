@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import tpLogo from "@/assets/tpLogo.png";
 
 const HeroSection = () => {
   return (
@@ -9,9 +10,9 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.img
-          src={logo}
+          src={tpLogo}
           alt="The Selah Studios"
-          className="mx-auto w-40 h-40 md:w-56 md:h-56 object-contain mb-8"
+          className="mx-auto w-60 h-60 md:w-76 md:h-76 object-contain mb-8"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
