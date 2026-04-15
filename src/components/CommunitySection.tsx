@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, Calendar, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { buildComingSoonPath } from "@/lib/routes";
 
 const items = [
   {
@@ -8,22 +9,21 @@ const items = [
     title: "Community Service",
     description: "Serving our neighborhoods with the love of Christ — because faith without works is dead.",
     linkText: "Get Involved",
-    href: "#",
+    to: buildComingSoonPath("Community Service"),
   },
   {
     icon: Calendar,
     title: "Events",
     description: "Worship nights, pop-ups, and gatherings designed to bring believers together in fellowship.",
     linkText: "Upcoming Events",
-    href: "#",
+    to: buildComingSoonPath("Upcoming Events"),
   },
   {
     icon: Users,
     title: "Join the Community",
     description: "Stay connected. Be part of a tribe that seeks God's vision and brings it to life.",
     linkText: "Connect With Us",
-    href: "/connect",
-    isRoute: true,
+    to: "/connect",
   },
 ];
 
@@ -58,21 +58,12 @@ const CommunitySection = () => {
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
                 {item.description}
               </p>
-              {(item as any).isRoute ? (
-                <Link
-                  to={item.href}
-                  className="font-body text-xs uppercase tracking-[0.2em] text-accent hover:text-foreground transition-colors border-b border-accent/40 pb-1"
-                >
-                  {item.linkText}
-                </Link>
-              ) : (
-                <a
-                  href={item.href}
-                  className="font-body text-xs uppercase tracking-[0.2em] text-accent hover:text-foreground transition-colors border-b border-accent/40 pb-1"
-                >
-                  {item.linkText}
-                </a>
-              )}
+              <Link
+                to={item.to}
+                className="border-b border-accent/40 pb-1 font-body text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:text-foreground"
+              >
+                {item.linkText}
+              </Link>
             </motion.div>
           ))}
         </div>
