@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.png";
 import heroBg from "@/assets/Selah_Hero_Section.mp4";
 
 const HeroSection = () => {
