@@ -12,11 +12,10 @@ const HeroSection = () => {
         <motion.img
           src={tpLogo}
           alt="The Selah Studios"
-          className="mx-auto w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-contain mb-8"
+          className="mx-auto w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] object-contain mb-8"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          hover:scale-105 transition-transform duration-500
         />
 
         <motion.p
