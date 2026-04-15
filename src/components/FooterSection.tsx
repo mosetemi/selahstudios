@@ -12,7 +12,7 @@ const FooterSection = () => {
   return (
     <footer className="py-16 bg-charcoal">
       <div className="container mx-auto px-4 text-center">
-        <img src={tpLogo} alt="The Selah Studios" className="mx-auto w-16 h-16 object-contain mb-6 opacity-80" />
+        <img src={tpLogo} alt="The Selah Studios" className="mx-auto w-42 h-42 object-contain mb-6 opacity-80" />
         <p className="font-accent text-sm italic text-cream/50 mb-8">
           Pause. Listen. Create.
         </p>
