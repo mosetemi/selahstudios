@@ -1,21 +1,63 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import logo from "@/assets/logo.png";
 import tpLogo from "@/assets/tpLogo.png";
 
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
+
+    const tryPlay = () => {
+      const p = video.play();
+      if (p && typeof p.catch === "function") {
+        p.catch(() => {
+          // Retry on first user interaction if autoplay was blocked
+          const onInteract = () => {
+            video.play().catch(() => {});
+            window.removeEventListener("touchstart", onInteract);
+            window.removeEventListener("click", onInteract);
+          };
+          window.addEventListener("touchstart", onInteract, { once: true });
+          window.addEventListener("click", onInteract, { once: true });
+        });
+      }
+    };
+
+    // Ensure looping even if browser drops the loop on rare occasions
+    const onEnded = () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    };
+    video.addEventListener("ended", onEnded);
+
+    tryPlay();
+    return () => video.removeEventListener("ended", onEnded);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal">
       {/* Background looping video */}
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover opacity-40"
-        src="/media/hero-video.mp4"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
+        controls={false}
+        disablePictureInPicture
         aria-hidden="true"
-      />
+      >
+        <source src="/media/hero-video.mp4" type="video/mp4" />
+      </video>
       {/* Dark overlay for legibility */}
       <div className="absolute inset-0 bg-charcoal/60" />
       {/* Subtle texture overlay */}
