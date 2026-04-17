@@ -5,6 +5,19 @@ import tpLogo from "@/assets/tpLogo.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal">
+      {/* Background looping video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        src="/media/hero-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+      {/* Dark overlay for legibility */}
+      <div className="absolute inset-0 bg-charcoal/60" />
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--gold)/0.3),transparent_60%)]" />
 
