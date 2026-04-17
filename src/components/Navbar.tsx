@@ -4,11 +4,12 @@ import logo from "@/assets/logo.png";
 import tpLogo from "@/assets/tpLogo.png";
 
 const navLinks = [
-  { label: "Shop", href: "#shop" },
-  { label: "Podcast", href: "#podcast" },
-  { label: "Community", href: "#community" },
-  { label: "Give", href: "#giving" },
-  { label: "About", href: "#about" },
+  { label: "Shop", href: "/#shop" },
+  { label: "Podcast", href: "/#podcast" },
+  { label: "Album", href: "/album" },
+  { label: "Community", href: "/#community" },
+  { label: "Give", href: "/#giving" },
+  { label: "About", href: "/#about" },
 ];
 
 const Navbar = () => {
