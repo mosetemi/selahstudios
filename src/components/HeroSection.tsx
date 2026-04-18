@@ -52,6 +52,7 @@ const HeroSection = () => {
         loop
         playsInline
         preload="auto"
+        poster="/media/hero-poster.jpg"
         controls={false}
         disablePictureInPicture
         aria-hidden="true"
