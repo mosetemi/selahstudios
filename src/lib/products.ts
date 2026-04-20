@@ -91,6 +91,14 @@ export const products: Product[] = [
     price: "$120",
     category: "jackets",
   },
+  {
+    slug: "jehovah-shammah-black-jacket",
+    name: "Jehovah Shammah Jacket - Black",
+    subtitle: "The Lord is Here",
+    image: jsBlackGold,
+    price: "$120",
+    category: "jackets",
+  },
 ];
 
 export const getProductsByCategory = (category: ProductCategory) =>
