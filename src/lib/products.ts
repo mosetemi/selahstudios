@@ -52,22 +52,6 @@ export const products: Product[] = [
     category: "shirts",
   },
   {
-    slug: "jehovah-rapha-cream",
-    name: "Jehovah Rapha Tee - Cream",
-    subtitle: "The LORD My Healer",
-    image: jrPurple,
-    price: "$45",
-    category: "shirts",
-  },
-  {
-    slug: "jehovah-shammah-ivory",
-    name: "Jehovah Shammah Tee - Ivory",
-    subtitle: "The Lord is Here",
-    image: jsBlackGold,
-    price: "$45",
-    category: "shirts",
-  },
-  {
     slug: "shammah-varsity",
     name: "Shammah Varsity Jacket",
     subtitle: "The Lord is Here",
