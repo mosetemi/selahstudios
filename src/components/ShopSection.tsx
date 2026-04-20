@@ -1,44 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import jrPurple from "@/assets/jr-purple.png";
-import jsBlackGold from "@/assets/js-black-gold.png";
-import shammahVarsity from "@/assets/shammah-varsity.png";
-import jirehGreen from "@/assets/jireh-green.png";
-import shalomVarsity from "@/assets/shalom-varsity.png";
-import { buildComingSoonPath } from "@/lib/routes";
-
-const products = [
-  {
-    name: "Jehovah Rapha Shirt",
-    subtitle: "The LORD My Healer",
-    image: jrPurple,
-    price: "$65",
-  },
-  {
-    name: "Jehovah Shammah Shirt",
-    subtitle: "The Lord is Here",
-    image: jsBlackGold,
-    price: "$65",
-  },
-  {
-    name: "Shammah Varsity Jacket",
-    subtitle: "The Lord is Here",
-    image: shammahVarsity,
-    price: "$120",
-  },
-  {
-    name: "Jireh Varsity Jacket",
-    subtitle: "The Lord Provides",
-    image: jirehGreen,
-    price: "$120",
-  },
-  {
-    name: "Shalom Varsity Jacket",
-    subtitle: "The Lord is my Peace",
-    image: shalomVarsity,
-    price: "$120",
-  },
-];
+import { collections } from "@/lib/products";
 
 const ShopSection = () => {
   return (
@@ -56,30 +18,39 @@ const ShopSection = () => {
           <div className="w-16 h-px bg-accent mx-auto mt-4" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {products.map((product, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {collections.map((collection, i) => (
             <motion.div
-              key={product.name}
+              key={collection.slug}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Link
-                to={buildComingSoonPath(product.name)}
+                to={`/shop/${collection.slug}`}
                 className="group block cursor-pointer"
-                aria-label={`Open coming soon page for ${product.name}`}
+                aria-label={`Browse ${collection.name} collection`}
               >
-                <div className="relative mb-4 aspect-[3/4] overflow-hidden bg-secondary">
+                <div className="relative mb-4 aspect-[4/5] overflow-hidden bg-secondary">
                   <img
-                    src={product.image}
-                    alt={product.name}
+                    src={collection.cover}
+                    alt={collection.name}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/0 transition-colors duration-500" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                    <p className="font-accent text-base italic text-background/90 tracking-wide mb-1 drop-shadow">
+                      {collection.tagline}
+                    </p>
+                    <h3 className="font-display text-3xl md:text-4xl text-background tracking-wide drop-shadow">
+                      {collection.name}
+                    </h3>
+                    <span className="mt-3 font-body text-xs tracking-[0.3em] uppercase text-background/90 border-b border-background/60 pb-1">
+                      Shop the Series
+                    </span>
+                  </div>
                 </div>
-                <h3 className="font-display text-lg text-foreground">{product.name}</h3>
-                <p className="font-accent text-sm italic text-muted-foreground">{product.subtitle}</p>
-                <p className="mt-1 font-body text-sm tracking-wide text-accent">{product.price}</p>
               </Link>
             </motion.div>
           ))}
