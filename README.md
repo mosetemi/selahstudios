@@ -1,73 +1,154 @@
-# Welcome to your Lovable project
+# Selah Studios
 
-## Project info
+A modern web application built with React, TypeScript, and Vite, featuring a beautiful UI with shadcn/ui components.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Overview
 
-## How can I edit this code?
+Selah Studios is a contemporary website showcasing albums, podcasts, community content, and more. The project features a responsive design, smooth animations, and a rich component library for an engaging user experience.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- 🎨 **Beautiful UI Components** - Built with shadcn/ui and Radix UI
+- ⚡ **Fast Performance** - Powered by Vite for rapid development and optimized builds
+- 🎯 **Responsive Design** - Mobile-first approach with Tailwind CSS
+- 🎬 **Smooth Animations** - Framer Motion for delightful interactions
+- 📱 **Type-Safe** - Full TypeScript support
+- 🔄 **Server State Management** - React Query for efficient data fetching
+- 🧪 **Testing Ready** - Playwright and Vitest configured
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend Framework**: React 18+
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Component Library**: shadcn/ui + Radix UI
+- **Routing**: React Router
+- **State Management**: React Query
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form
+- **Testing**: Vitest + Playwright
+- **Linting**: ESLint
+- **Infrastructure**: Terraform
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js 16+ or Bun
+- npm, yarn, or bun package manager
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd selahstudios-1
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   bun run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests once
+- `npm run test:watch` - Run tests in watch mode
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable React components
+│   ├── sections/       # Page sections (Hero, About, Album, etc.)
+│   └── ui/            # shadcn/ui components
+├── pages/             # Page components
+│   ├── Index.tsx      # Home page
+│   ├── Album.tsx      # Album page
+│   ├── Connect.tsx    # Connect page
+│   └── ComingSoon.tsx # Coming soon page
+├── hooks/             # Custom React hooks
+├── lib/               # Utilities and helpers
+│   ├── routes.ts      # Route definitions
+│   └── utils.ts       # Utility functions
+├── assets/            # Static assets
+└── App.tsx           # Root application component
 ```
 
-**Edit a file directly in GitHub**
+## Pages
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Home** (`/`) - Main landing page with hero, sections, and call-to-action
+- **Album** (`/album`) - Album showcase page
+- **Connect** (`/connect`) - Connect/contact page
+- **Coming Soon** (`/coming-soon`) - Coming soon page for unreleased features
 
-**Use GitHub Codespaces**
+## Sections
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application includes multiple content sections:
+- Hero Section
+- About Section
+- Album Section
+- Podcast Section
+- Scripture Section
+- Community Section
+- Giving Section
+- Shop Section
+- Footer Section
 
-## What technologies are used for this project?
+## Configuration
 
-This project is built with:
+- **Vite**: See `vite.config.ts`
+- **TypeScript**: See `tsconfig.json`
+- **Tailwind CSS**: See `tailwind.config.ts`
+- **PostCSS**: See `postcss.config.js`
+- **ESLint**: See `eslint.config.js`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Infrastructure
 
-## How can I deploy this project?
+Infrastructure is managed with Terraform. Configuration files are located in the `terraform/` directory:
+- `main.tf` - Main infrastructure configuration
+- `providers.tf` - Provider configuration
+- `variables.tf` - Variable definitions
+- `outputs.tf` - Output values
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Testing
 
-## Can I connect a custom domain to my Lovable project?
+Run tests with:
+```bash
+npm run test        # Run tests once
+npm run test:watch  # Run tests in watch mode
+```
 
-Yes, you can!
+Playwright configuration is available in `playwright.config.ts` for end-to-end testing.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Commit your changes (`git commit -m 'Add amazing feature'`)
+3. Push to the branch (`git push origin feature/amazing-feature`)
+4. Open a Pull Request
+
+## License
+
+This project is private and proprietary.
+
+## Support
+
+For questions or support, please reach out to the development team.
