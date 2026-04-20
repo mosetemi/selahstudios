@@ -33,3 +33,4 @@ dist-ssr
 *.tfstate
 *.tfstate.*
 terraform.tfvars
+.terraform.lock.hcl
