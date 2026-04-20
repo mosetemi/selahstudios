@@ -5,6 +5,7 @@ import jehovahRaphaBlack from "@/assets/jehovah-rapha-black.png";
 import shammahVarsity from "@/assets/shammah-varsity.png";
 import jirehGreen from "@/assets/jireh-green.png";
 import shalomVarsity from "@/assets/shalom-varsity.png";
+import shirtsCover from "@/assets/shirts-cover.png";
 
 export type ProductCategory = "shirts" | "jackets";
 
