@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -14,6 +15,10 @@ const isValidCategory = (slug?: string): slug is ProductCategory =>
 
 const Collection = () => {
   const { category } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [category]);
 
   if (!isValidCategory(category)) {
     return <Navigate to="/" replace />;
