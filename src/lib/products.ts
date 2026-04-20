@@ -114,7 +114,7 @@ export const collections: {
     slug: "shirts",
     name: "Shirts",
     tagline: "Wear the Word",
-    cover: jehovahRaphaTan,
+    cover: shirtsCover,
   },
   {
     slug: "jackets",
