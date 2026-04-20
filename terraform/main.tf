@@ -12,15 +12,15 @@ resource "aws_s3_bucket" "website" {
 }
 # Enable static website hosting
 resource "aws_s3_bucket_website_configuration" "website" {
-    bucket = aws_s3_bucket.website.id
+  bucket = aws_s3_bucket.website.id
 
-    index_document {
-        suffix = "index.html"
-    }
+  index_document {
+    suffix = "index.html"
+  }
 
-    error_document {
-        key = "index.html"
-    }
+  error_document {
+    key = "index.html"
+  }
 }
 
 # Allow public access for website hosting
