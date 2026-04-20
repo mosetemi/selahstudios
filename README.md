@@ -1,14 +1,14 @@
 # Selah Studios
 
-A modern web application built with React, TypeScript, and Vite, featuring a beautiful UI with shadcn/ui components.
+A modern web application built with React, TypeScript, and Vite.
 
 ## Overview
 
-Selah Studios is a contemporary website showcasing albums, podcasts, community content, and more. The project features a responsive design, smooth animations, and a rich component library for an engaging user experience.
+Selah Studios is a Faith-based platform created to capture and bring to life God's vision for every individual. The project encapsulates the technical details of the webpage components and infrastructure.
 
 ## Features
 
-- 🎨 **Beautiful UI Components** - Built with shadcn/ui and Radix UI
+- 🎨 **UI Components** - Built with shadcn/ui and Radix UI
 - ⚡ **Fast Performance** - Powered by Vite for rapid development and optimized builds
 - 🎯 **Responsive Design** - Mobile-first approach with Tailwind CSS
 - 🎬 **Smooth Animations** - Framer Motion for delightful interactions
@@ -94,7 +94,7 @@ src/
 
 ## Pages
 
-- **Home** (`/`) - Main landing page with hero, sections, and call-to-action
+- **Home** (`/`) - Main landing page with brand summary
 - **Album** (`/album`) - Album showcase page
 - **Connect** (`/connect`) - Connect/contact page
 - **Coming Soon** (`/coming-soon`) - Coming soon page for unreleased features
