@@ -34,12 +34,10 @@ Selah Studios is a Faith-based platform created to capture and bring to life God
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 16+ or Bun
 - npm, yarn, or bun package manager
 
 ### Installation
-
 1. Clone the repository:
    ```bash
    git clone <repository-url>
